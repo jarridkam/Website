@@ -8,11 +8,32 @@ body {
 }
 
 .header {
-    background-color: #333;
+    position: relative;
+    background-color: #0e1116;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
 }
+
+.header-links {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    list-style-type: none;
+}
+
+.header-links li {
+    display: inline;
+    margin-left: 40px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #ffffff;  /* Change color here */
+    padding-top: 5px;
+    padding-right: 10px
+}
+
 
 .header h1 {
     margin: 0;
@@ -108,25 +129,44 @@ body {
     z-index: -1;
 }
 
-.portfolio-item.ardenfall:hover{
-    transform: scale(1.1);  
-}
-
-.portfolio-item.waywardrealms:hover{
-    transform: scale(1.1);  
-}
-
-.portfolio-item.lastlight:hover{
-    transform: scale(1.1);  
-}
-
 .portfolio-item h3 {
-    color: #f4f4f4;
-    font-size: 1.2em;
+    color: #ffffff;
+    font-size: 1.5em;
+    -webkit-text-stroke: .6px black;
+	
 }
+
+.ardenfall-info{
+    border: 1px solid #000; 
+}
+
+.portfolio-display {
+    display: flex; /* This makes the container a flex container */
+    justify-content: flex-start; /* This packs items towards the start of the line */
+    align-items: center; /* This centers the images vertically */
+    flex-wrap: nowrap; /* This forces all items to be on one line */
+}
+
+.portfolio-display img {
+    flex: 0 0 auto; /* This prevents the images from growing to fill unused space */
+    width: 100%; /* This sets the base size of the images */
+    max-width: 300px; /* This prevents the images from becoming too large */
+    height: auto; /* This maintains the aspect ratio of the images */
+    margin-right: 10px; /* Add a small margin to the right if you want some space between images */
+    margin-left:10px;
+    margin-bottom: 10px;
+
+}
+
+.portfolio-display img:hover{
+    transform: scale(1.8); 
+}
+
+
+
 
 .footer {
-    background-color: #333;
+    background-color: #0e1116;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
