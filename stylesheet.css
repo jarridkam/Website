@@ -7,14 +7,23 @@ body {
     background-color: #f4f4f4;
     padding-top: 70px; /* Adjust to match the height of your header */
     padding-bottom: 70px; /* Adjust to match the height of your footer */
+    display: flex;
+    flex-direction: column;  /* Vertical direction */
+    height: 100%;  /* replaced min-height with height */
 }
 
+.content {
+    flex: 1;  /* Flex grow, this will push the footer down */
+}
+
+
 .scroll-container {
-    position: absolute;
-    top: 70px; /* Adjust to match the height of your header */
-    bottom: 70px; /* Adjust to match the height of your footer */
+    position: relative;  /* replaced absolute with relative */
+    top: 0;
+    bottom: 0;
     width: 100%;
     overflow: auto;
+    flex-grow: 1;  /* added this to take remaining height */
 }
 
 .header {
@@ -91,7 +100,7 @@ body {
     overflow: hidden;
 }
 
-.portfolio-item.portfolio-item.lastlight::before {
+.portfolio-item.lastlight::before {
     content: "";
     position: absolute;
     top: 0;
@@ -100,10 +109,11 @@ body {
     height: 100%;
     background-image: url(Img/lastlight.png); 
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 50%; 
+    background-size: auto 100%; 
+    background-position: 90%; /* Adjust this value to move your background to the left */
     z-index: -1;
 }
+
 
 .portfolio-item.waywardrealms {
     position: relative;
@@ -135,6 +145,7 @@ body {
     overflow: hidden;
 }
 
+
 .portfolio-item.ardenfall::before {
     content: "";
     position: absolute;
@@ -151,6 +162,25 @@ body {
 
 .ardenfall-info{
     background-color: rgb(255, 255, 255, .5);
+}
+
+.portfolio-display video {
+    flex: 0 0 auto; 
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    margin-right: 10px; 
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+.content-display {
+    text-align: center;
+    background-color: rgb(255, 255, 255, .5);
+}
+
+.portfolio-display video:hover{
+    transform: scale(1.5); 
 }
 
 .portfolio-item h3 {
@@ -191,7 +221,6 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    bottom:0
 }
 
 .footer a {
