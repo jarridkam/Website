@@ -12,10 +12,6 @@ body {
     height: 100%;  /* replaced min-height with height */
 }
 
-.content {
-    flex: 1;  /* Flex grow, this will push the footer down */
-}
-
 
 .scroll-container {
     position: relative;  /* replaced absolute with relative */
