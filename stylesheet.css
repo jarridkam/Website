@@ -68,6 +68,41 @@ body {
     margin: 0.5em 0;
 }
 
+.story-sample {
+    margin: 50px auto;
+    width: 80%;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #0e1116;
+    color: #ffffff;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.story-header {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.story-title {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.story-description {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -82,6 +117,10 @@ body {
 
 .container h3{
     border-bottom: 1px solid #ffffff;
+}
+
+.container p{
+    text-align: center;
 }
 
 .portfolio-item {
@@ -106,9 +145,24 @@ body {
     background-image: url(Img/lastlight.png); 
     background-repeat: no-repeat;
     background-size: auto 100%; 
-    background-position: 90%; /* Adjust this value to move your background to the left */
+    background-position: 45%; /* Adjust this value to move your background to the left */
     z-index: -1;
 }
+
+.play-link {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.play-link a {
+    color: #000000; 
+    text-decoration: none;
+}
+
+.play-link a:hover {
+    color: #000000;  
+}
+
 
 
 .portfolio-item.waywardrealms {
@@ -158,6 +212,16 @@ body {
 
 .ardenfall-info{
     background-color: rgb(255, 255, 255, .5);
+}
+
+.project-description {
+    padding: 20px;
+    text-align: left; 
+    font-size: 1.2em;
+}
+
+.description-title {
+    text-align: center; 
 }
 
 .portfolio-display video {
