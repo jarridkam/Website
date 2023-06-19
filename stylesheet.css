@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;  /* Vertical direction */
     height: 100%;  /* replaced min-height with height */
+    overflow-x: hidden;
 }
 
 
@@ -256,6 +257,9 @@ body {
     justify-content: center; 
     align-items: center; 
     flex-wrap: nowrap; 
+    min-width: 100%;
+    gap: 10px;
+    
 }
 
 .portfolio-display img {
